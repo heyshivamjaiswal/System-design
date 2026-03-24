@@ -1,7 +1,7 @@
 # Low Level Design (LLD) — Complete Notes
 
 > **From your handwritten notes + enriched theory, examples & diagrams.**  
-> After reading this, you will not need any other resource.
+> Tried to cover as much as possible.
 
 ---
 
