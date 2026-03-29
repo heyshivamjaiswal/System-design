@@ -1,6 +1,7 @@
 # System Design
 
 > Learning system design from first principles — both Low Level Design (LLD) and High Level Design (HLD).
+> (Still in progress....)
 
 [![MIT License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
