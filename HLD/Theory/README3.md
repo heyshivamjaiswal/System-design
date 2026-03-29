@@ -1,10 +1,5 @@
 # Consistent Hashing, Bloom Filters & Distributed State Management
 
-## Complete Beginner-to-Revision Guide
-
-> **Simple English. Clear logic. Every concept connected to the next.**  
-> After reading this you will not need any other resource.
-
 ---
 
 ## Table of Contents
@@ -72,7 +67,7 @@ Example with N=3 servers:
   hash("item_789") = 3847291  →  3847291 % 3 = 2  →  Server 2
 ```
 
-> **[Place Diagram 1 — `01_simple_hashing.png` here]**
+> ![Diagram 1](../images/01_simple_hashing.png)
 
 This works perfectly — **until you add or remove a server.**
 
@@ -80,7 +75,7 @@ This works perfectly — **until you add or remove a server.**
 
 ## 2. The Problem with Simple Hashing
 
-> **[Place Diagram 2 — `02_simple_hashing_problem.png` here]**
+> ![Diagram 2](../images/02_simple_hashing_problem.png)
 
 ### What Happens When You Add a Server?
 
@@ -122,7 +117,7 @@ The problem is that `hash(key) % N` is **globally sensitive** — changing N cha
 
 ## 3. Consistent Hashing Mechanism
 
-> **[Place Diagram 3 — `03_consistent_hashing_ring.png` here]**
+> ![Diagram 3](../images/03_consistent_hashing_ring.png)
 
 ### The Big Idea: A Hash Ring
 
@@ -209,7 +204,7 @@ The ring approach has one problem: with only a few servers, the ring sections ar
 
 ## 5. Virtual Nodes
 
-> **[Place Diagram 4 — `04_virtual_nodes.png` here]**
+> ![Diagram 4](04_virtual_nodes.png)
 
 ### The Problem with Plain Consistent Hashing
 
@@ -297,7 +292,7 @@ Bloom Filters trade a **small probability of being wrong** (false positives) for
 
 ## 7. How Bloom Filters Work
 
-> **[Place Diagram 5 — `05_bloom_filter_insert.png` here]**
+> ![Diagram 5](../images/05_bloom_filter_insert.png)
 
 ### Step 1: Initialization
 
@@ -341,7 +336,7 @@ Bits:  [ 0  0  1  0  1  0  0  1  0  0  0  0  1  0  1  0 ]
 
 ### Step 3: Querying an Element
 
-> **[Place Diagram 6 — `06_bloom_filter_lookup.png` here]**
+> ![Diagram 6](../images/06_bloom_filter_lookup.png)
 
 To check if `"apple"` is in the set:
 
@@ -414,7 +409,7 @@ For storing 1 million URLs: 10 MB for a 1.2% false positive rate vs gigabytes to
 
 ## 9. Real-World Use Cases
 
-> **[Place Diagram 7 — `07_bloom_filter_usecases.png` here]**
+> ![Diagram 7](../images/07_bloom_filter_usecases.png)
 
 ### 1. Google Chrome Safe Browsing
 
@@ -495,7 +490,7 @@ Result: Protects backend from invalid key storms.
 
 ## 10. The Single Database Problem
 
-> **[Place Diagram 8 — `08_single_db_problems.png` here]**
+> ![Diagram 8](../images/08_single_db_problems.png)
 
 ### Why Single Database Works Initially
 
@@ -564,7 +559,7 @@ The solution to all these problems is to **distribute state across multiple node
 
 ## 11. Centralized vs Peer-to-Peer State Management
 
-> **[Place Diagram 9 — `09_centralized_vs_p2p.png` here]**
+> ![Diagram 9](../images/09_centralized_vs_p2p.png)
 
 ### Centralized State Management
 
@@ -618,7 +613,7 @@ Architecture:
 
 ## 12. Broadcast and Eager Reliable Broadcast
 
-> **[Place Diagram 11 — `11_broadcast_types.png` here]**
+> ![Diagram 11](../images/1_broadcast_types.png)
 
 Before understanding Gossip, we need to understand the two types of broadcast.
 
@@ -675,7 +670,7 @@ Node 2 receives → Node 2 re-broadcasts to 1, 3, 4, 5
 
 ## 13. Gossip / Epidemic Protocol
 
-> **[Place Diagram 10 — `10_gossip_protocol.png` here]**
+> ![Diagram 10](../images/10_gossip_protocol.png)
 
 ### What is the Gossip Protocol?
 
@@ -888,7 +883,7 @@ class DistributedNode {
 
 ## Grand Flow Diagram
 
-> **[Place Diagram 12 — `12_grand_flow.png` here — this is the master summary diagram]**
+> ![Diagram 12](../images/12_grand_flow3.png)
 
 ### How All Three Systems Work Together
 
