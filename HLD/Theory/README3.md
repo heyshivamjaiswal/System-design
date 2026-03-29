@@ -1,10 +1,5 @@
 # Consistent Hashing, Bloom Filters & Distributed State Management
 
-## Complete Beginner-to-Revision Guide
-
-> **Simple English. Clear logic. Every concept connected to the next.**  
-> After reading this you will not need any other resource.
-
 ---
 
 ## Table of Contents
